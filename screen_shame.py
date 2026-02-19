@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 """
-screen-shame: A passive-aggressive screen time monitor that sends
+philoscreen: A passive-aggressive screen time monitor that sends
 escalating Slack DMs based on how long you've been at your computer.
 
-Usage:
-    1. Create a Slack Incoming Webhook:
-       https://api.slack.com/messaging/webhooks
-    2. Set the SCREEN_SHAME_WEBHOOK env var (or pass --webhook)
-    3. Run: python3 screen_shame.py
+(philo = love. You love your screen too much.)
 
-The script polls macOS idle time every 60 seconds. If you've been
-active (idle < 5 min), it accumulates screen time. When you cross
-a tier threshold (2h, 4h, 6h, ...), it sends you a message.
+Usage:
+    1. Run: python3 setup.py  (guided wizard)
+    -- or --
+    1. Create a Slack Incoming Webhook
+    2. Set the PHILOSCREEN_WEBHOOK env var (or pass --webhook)
+    3. Run: python3 screen_shame.py
 
 Resets daily at midnight.
 """
@@ -42,7 +41,7 @@ SLACK_TAGLINES = [
 # ── Config ──────────────────────────────────────────────
 POLL_INTERVAL = 60          # seconds between checks
 IDLE_THRESHOLD = 300        # seconds — under this counts as "active"
-STATE_FILE = os.path.expanduser("~/.screen-shame-state.json")
+STATE_FILE = os.path.expanduser("~/.philoscreen-state.json")
 
 # ── ANSI Colors ─────────────────────────────────────────
 RESET   = "\033[0m"
@@ -70,15 +69,15 @@ TIER_COLORS = {
 BANNER = f"""{BOLD}{MAGENTA}
   ┌─────────────────────────────────────────┐
   │                                         │
-  │   {WHITE}screen-shame{MAGENTA}                        │
-  │   {DIM}{WHITE}judgment as a service (JaaS){RESET}{BOLD}{MAGENTA}       │
+  │   {WHITE}philoscreen{MAGENTA}                         │
+  │   {DIM}{WHITE}you love your screen too much{RESET}{BOLD}{MAGENTA}      │
   │                                         │
   └─────────────────────────────────────────┘{RESET}
 """
 
 SHUTDOWN_MSG = f"""
 {DIM}─────────────────────────────────────────────{RESET}
-  {GREEN}screen-shame stopped.{RESET}
+  {GREEN}philoscreen stopped.{RESET}
   {DIM}Your eyes, spine, and loved ones thank you.{RESET}
 {DIM}─────────────────────────────────────────────{RESET}
 """
@@ -324,13 +323,27 @@ examples:
     parser.add_argument("--test", action="store_true", help="Send a single test message and exit")
     args = parser.parse_args()
 
-    webhook_url = args.webhook or os.environ.get("SCREEN_SHAME_WEBHOOK", "")
+    webhook_url = (
+        args.webhook
+        or os.environ.get("PHILOSCREEN_WEBHOOK", "")
+        or os.environ.get("SCREEN_SHAME_WEBHOOK", "")  # backward compat
+    )
+
+    # Auto-load from .env file if no webhook provided
+    if not webhook_url:
+        env_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+        if os.path.exists(env_file):
+            with open(env_file) as f:
+                for line in f:
+                    if line.startswith("PHILOSCREEN_WEBHOOK=") or line.startswith("SCREEN_SHAME_WEBHOOK="):
+                        webhook_url = line.split("=", 1)[1].strip()
+                        break
 
     if args.test:
         if not webhook_url:
-            print(f"\n  {RED}Error: provide --webhook or set SCREEN_SHAME_WEBHOOK{RESET}\n", file=sys.stderr)
+            print(f"\n  {RED}Error: provide --webhook or set PHILOSCREEN_WEBHOOK{RESET}\n", file=sys.stderr)
             sys.exit(1)
-        msg = ":wave: *screen-shame test* — If you're reading this, the roasting pipeline is operational. Prepare to be judged."
+        msg = ":wave: *philoscreen test* — If you're reading this, the roasting pipeline is operational. Prepare to be judged."
         if send_slack_message(webhook_url, msg):
             print_test_success()
         else:

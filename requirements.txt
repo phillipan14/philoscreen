@@ -1,3 +1,3 @@
-# screen-shame has zero external dependencies!
+# philoscreen has zero external dependencies!
 # It uses urllib from the standard library for Slack webhooks.
 # This file exists for documentation — nothing to install.
