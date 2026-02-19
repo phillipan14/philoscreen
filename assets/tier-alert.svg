@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="320">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .terminal {
+          background: #1a1b26;
+          color: #c0caf5;
+          font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+          font-size: 13px;
+          line-height: 1.5;
+          padding: 20px 16px;
+          border-radius: 10px;
+          box-sizing: border-box;
+          width: 560px;
+          overflow: hidden;
+        }
+        .titlebar {
+          display: flex;
+          gap: 7px;
+          margin-bottom: 14px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #2a2b3d;
+          align-items: center;
+        }
+        .dot {
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .dot.red { background: #ff5f56; }
+        .dot.yel { background: #ffbd2e; }
+        .dot.grn { background: #27c93f; }
+        .title {
+          color: #565f89;
+          font-size: 12px;
+          margin-left: 8px;
+        }
+        pre {
+          margin: 0;
+          white-space: pre;
+          font: inherit;
+        }
+      </style>
+      <div class="terminal">
+        <div class="titlebar">
+          <span class="dot red"></span>
+          <span class="dot yel"></span>
+          <span class="dot grn"></span>
+          <span class="title">screen-shame — tier alert</span>
+        </div>
+        <pre>
+  <span style="color:#df5fdf">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+  <span style="color:#df5fdf"><span style="font-weight:bold">  ⚡ TIER 6h</span></span>  <span style="opacity:0.55">[SENT]</span>
+  <span style="color:#df5fdf">───────────────────────────────────────────</span>
+  <span style="color:#df5fdf">  6 hours. At this point your chair has</span>
+  <span style="color:#df5fdf">  more of a relationship with you than</span>
+  <span style="color:#df5fdf">  most humans do.</span>
+  <span style="color:#df5fdf">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+
+  <span style="font-weight:bold"><span style="color:#e8e8e8">  6h 1m</span></span>  <span style="color:#ff5f5f">░░░░░░░░░░░░░░░░░░░░░░░░</span> <span style="opacity:0.55">8h</span>  <span style="color:#5fdf5f">● active</span>  <span style="opacity:0.55">idle 1s</span>
+
+</pre>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1640">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .terminal {
+          background: #1a1b26;
+          color: #c0caf5;
+          font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+          font-size: 13px;
+          line-height: 1.5;
+          padding: 20px 16px;
+          border-radius: 10px;
+          box-sizing: border-box;
+          width: 560px;
+          overflow: hidden;
+        }
+        .titlebar {
+          display: flex;
+          gap: 7px;
+          margin-bottom: 14px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #2a2b3d;
+          align-items: center;
+        }
+        .dot {
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .dot.red { background: #ff5f56; }
+        .dot.yel { background: #ffbd2e; }
+        .dot.grn { background: #27c93f; }
+        .title {
+          color: #565f89;
+          font-size: 12px;
+          margin-left: 8px;
+        }
+        pre {
+          margin: 0;
+          white-space: pre;
+          font: inherit;
+        }
+      </style>
+      <div class="terminal">
+        <div class="titlebar">
+          <span class="dot red"></span>
+          <span class="dot yel"></span>
+          <span class="dot grn"></span>
+          <span class="title">screen-shame — full demo</span>
+        </div>
+        <pre><span style="font-weight:bold"><span style="color:#df5fdf">
+  ┌─────────────────────────────────────────┐
+  │                                         │
+  │   <span style="color:#e8e8e8">screen-shame<span style="color:#df5fdf">                        │
+  │   <span style="opacity:0.55"><span style="color:#e8e8e8">passive-aggressive screen monitor</span></span></span></span></span></span><span style="font-weight:bold"><span style="color:#df5fdf">  │
+  │                                         │
+  └─────────────────────────────────────────┘</span></span>
+
+  <span style="opacity:0.55">───────────────────────────────────────────</span>
+  <span style="opacity:0.55">mode</span>      <span style="color:#dfdf5f">dry run</span>
+  <span style="opacity:0.55">active</span>    <span style="font-weight:bold">0m</span>
+  <span style="opacity:0.55">fired</span>     none
+  <span style="opacity:0.55">polling</span>   every 60s
+  <span style="opacity:0.55">idle ≥</span>    300s counts as away
+  <span style="opacity:0.55">───────────────────────────────────────────</span>
+
+
+  <span style="color:#5fdfdf">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+  <span style="color:#5fdfdf"><span style="font-weight:bold">  ⚡ TIER 2h</span></span>  <span style="opacity:0.55">[DRY RUN]</span>
+  <span style="color:#5fdfdf">───────────────────────────────────────────</span>
+  <span style="color:#5fdfdf">  Hey! Just noticed you've been at your</span>
+  <span style="color:#5fdfdf">  screen for 2 hours. No big deal.</span>
+  <span style="color:#5fdfdf">  Just... keeping track. For science.</span>
+  <span style="color:#5fdfdf">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+
+
+  <span style="color:#dfdf5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+  <span style="color:#dfdf5f"><span style="font-weight:bold">  ⚡ TIER 4h</span></span>  <span style="opacity:0.55">[DRY RUN]</span>
+  <span style="color:#dfdf5f">───────────────────────────────────────────</span>
+  <span style="color:#dfdf5f">  4 hours. Cool cool cool. I'm sure it's</span>
+  <span style="color:#dfdf5f">  all very important work and definitely</span>
+  <span style="color:#dfdf5f">  not doomscrolling.</span>
+  <span style="color:#dfdf5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+
+
+  <span style="color:#df5fdf">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+  <span style="color:#df5fdf"><span style="font-weight:bold">  ⚡ TIER 6h</span></span>  <span style="opacity:0.55">[DRY RUN]</span>
+  <span style="color:#df5fdf">───────────────────────────────────────────</span>
+  <span style="color:#df5fdf">  6 hours. At this point your chair has</span>
+  <span style="color:#df5fdf">  more of a relationship with you than</span>
+  <span style="color:#df5fdf">  most humans do.</span>
+  <span style="color:#df5fdf">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+
+
+  <span style="color:#ff5f5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+  <span style="color:#ff5f5f"><span style="font-weight:bold">  ⚡ TIER 8h</span></span>  <span style="opacity:0.55">[DRY RUN]</span>
+  <span style="color:#ff5f5f">───────────────────────────────────────────</span>
+  <span style="color:#ff5f5f">  At 8 hours, your screen isn't a tool</span>
+  <span style="color:#ff5f5f">  anymore. It's a lifestyle. A concerning</span>
+  <span style="color:#ff5f5f">  one.</span>
+  <span style="color:#ff5f5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+
+
+  <span style="font-weight:bold"><span style="color:#ff5f5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></span>
+  <span style="font-weight:bold"><span style="color:#ff5f5f"><span style="font-weight:bold">  ⚡ TIER 10h</span></span></span>  <span style="opacity:0.55">[DRY RUN]</span>
+  <span style="font-weight:bold"><span style="color:#ff5f5f">───────────────────────────────────────────</span></span>
+  <span style="font-weight:bold"><span style="color:#ff5f5f">  TEN. HOURS. Even your laptop is tired</span></span>
+  <span style="font-weight:bold"><span style="color:#ff5f5f">  of you. I can hear the fan crying.</span></span>
+  <span style="font-weight:bold"><span style="color:#ff5f5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></span>
+
+
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8"><span style="font-weight:bold">  ⚡ TIER 12h</span></span></span></span>  <span style="opacity:0.55">[DRY RUN]</span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">───────────────────────────────────────────</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">  Twelve hours. TWELVE. I'm genuinely</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">  worried about you. When did you last</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">  see the sky?</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></span></span>
+
+  <span style="font-weight:bold"><span style="color:#e8e8e8">12h 25m</span></span>  <span style="color:#ff5f5f">████████████████████████</span> <span style="opacity:0.55">MAX</span>  <span style="color:#5fdf5f">● active</span>  <span style="opacity:0.55">idle 2s</span>
+
+
+<span style="opacity:0.55">─────────────────────────────────────────────</span>
+  <span style="color:#5fdf5f">screen-shame stopped.</span>
+  <span style="opacity:0.55">Your eyes thank you.</span>
+<span style="opacity:0.55">─────────────────────────────────────────────</span>
+
+</pre>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="660">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .terminal {
+          background: #1a1b26;
+          color: #c0caf5;
+          font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+          font-size: 13px;
+          line-height: 1.5;
+          padding: 20px 16px;
+          border-radius: 10px;
+          box-sizing: border-box;
+          width: 560px;
+          overflow: hidden;
+        }
+        .titlebar {
+          display: flex;
+          gap: 7px;
+          margin-bottom: 14px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #2a2b3d;
+          align-items: center;
+        }
+        .dot {
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .dot.red { background: #ff5f56; }
+        .dot.yel { background: #ffbd2e; }
+        .dot.grn { background: #27c93f; }
+        .title {
+          color: #565f89;
+          font-size: 12px;
+          margin-left: 8px;
+        }
+        pre {
+          margin: 0;
+          white-space: pre;
+          font: inherit;
+        }
+      </style>
+      <div class="terminal">
+        <div class="titlebar">
+          <span class="dot red"></span>
+          <span class="dot yel"></span>
+          <span class="dot grn"></span>
+          <span class="title">screen-shame — escalation</span>
+        </div>
+        <pre>
+  <span style="color:#dfdf5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+  <span style="color:#dfdf5f"><span style="font-weight:bold">  ⚡ TIER 4h</span></span>  <span style="opacity:0.55">[SENT]</span>
+  <span style="color:#dfdf5f">───────────────────────────────────────────</span>
+  <span style="color:#dfdf5f">  4 hours of screen time. You know what</span>
+  <span style="color:#dfdf5f">  takes 4 hours? Hiking a mountain.</span>
+  <span style="color:#dfdf5f">  Learning to cook risotto. Just throwing</span>
+  <span style="color:#dfdf5f">  that out there.</span>
+  <span style="color:#dfdf5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+
+
+  <span style="color:#ff5f5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+  <span style="color:#ff5f5f"><span style="font-weight:bold">  ⚡ TIER 8h</span></span>  <span style="opacity:0.55">[SENT]</span>
+  <span style="color:#ff5f5f">───────────────────────────────────────────</span>
+  <span style="color:#ff5f5f">  At 8 hours, your screen isn't a tool</span>
+  <span style="color:#ff5f5f">  anymore. It's a lifestyle. A concerning</span>
+  <span style="color:#ff5f5f">  one.</span>
+  <span style="color:#ff5f5f">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+
+
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8"><span style="font-weight:bold">  ⚡ TIER 12h</span></span></span></span>  <span style="opacity:0.55">[SENT]</span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">───────────────────────────────────────────</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">  At 12 hours, I'm no longer</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">  passive-aggressive. I'm just</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">  aggressive. GO. OUTSIDE. NOW.</span></span></span>
+  <span style="font-weight:bold"><span style="background:#cc3333;padding:1px 3px;border-radius:2px"><span style="color:#e8e8e8">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></span></span>
+
+</pre>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

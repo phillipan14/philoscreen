@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="460">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .terminal {
+          background: #1a1b26;
+          color: #c0caf5;
+          font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+          font-size: 13px;
+          line-height: 1.5;
+          padding: 20px 16px;
+          border-radius: 10px;
+          box-sizing: border-box;
+          width: 560px;
+          overflow: hidden;
+        }
+        .titlebar {
+          display: flex;
+          gap: 7px;
+          margin-bottom: 14px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #2a2b3d;
+          align-items: center;
+        }
+        .dot {
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .dot.red { background: #ff5f56; }
+        .dot.yel { background: #ffbd2e; }
+        .dot.grn { background: #27c93f; }
+        .title {
+          color: #565f89;
+          font-size: 12px;
+          margin-left: 8px;
+        }
+        pre {
+          margin: 0;
+          white-space: pre;
+          font: inherit;
+        }
+      </style>
+      <div class="terminal">
+        <div class="titlebar">
+          <span class="dot red"></span>
+          <span class="dot yel"></span>
+          <span class="dot grn"></span>
+          <span class="title">screen-shame — startup</span>
+        </div>
+        <pre><span style="font-weight:bold"><span style="color:#df5fdf">
+  ┌─────────────────────────────────────────┐
+  │                                         │
+  │   <span style="color:#e8e8e8">screen-shame<span style="color:#df5fdf">                        │
+  │   <span style="opacity:0.55"><span style="color:#e8e8e8">passive-aggressive screen monitor</span></span></span></span></span></span><span style="font-weight:bold"><span style="color:#df5fdf">  │
+  │                                         │
+  └─────────────────────────────────────────┘</span></span>
+
+  <span style="opacity:0.55">───────────────────────────────────────────</span>
+  <span style="opacity:0.55">mode</span>      <span style="color:#dfdf5f">dry run</span>
+  <span style="opacity:0.55">active</span>    <span style="font-weight:bold">1h 47m</span>
+  <span style="opacity:0.55">fired</span>     none
+  <span style="opacity:0.55">polling</span>   every 60s
+  <span style="opacity:0.55">idle ≥</span>    300s counts as away
+  <span style="opacity:0.55">───────────────────────────────────────────</span>
+
+  <span style="font-weight:bold"><span style="color:#e8e8e8"> 1h 47m</span></span>  <span style="color:#5fdfdf">█████████████████████░░░</span> <span style="opacity:0.55">2h</span>  <span style="color:#5fdf5f">● active</span>  <span style="opacity:0.55">idle 3s</span>
+
+</pre>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
