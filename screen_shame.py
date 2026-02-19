@@ -29,6 +29,16 @@ from urllib.error import URLError
 
 from messages import TIERS, THRESHOLDS
 
+# Snarky taglines for the Slack footer — rotated randomly
+SLACK_TAGLINES = [
+    "your self-appointed screen time parole officer",
+    "the script that cares too much",
+    "judging you so you don't have to",
+    "passive-aggression as a service",
+    "your laptop's disappointed parent",
+    "screen time's least favorite app",
+]
+
 # ── Config ──────────────────────────────────────────────
 POLL_INTERVAL = 60          # seconds between checks
 IDLE_THRESHOLD = 300        # seconds — under this counts as "active"
@@ -61,7 +71,7 @@ BANNER = f"""{BOLD}{MAGENTA}
   ┌─────────────────────────────────────────┐
   │                                         │
   │   {WHITE}screen-shame{MAGENTA}                        │
-  │   {DIM}{WHITE}passive-aggressive screen monitor{RESET}{BOLD}{MAGENTA}  │
+  │   {DIM}{WHITE}judgment as a service (JaaS){RESET}{BOLD}{MAGENTA}       │
   │                                         │
   └─────────────────────────────────────────┘{RESET}
 """
@@ -69,9 +79,19 @@ BANNER = f"""{BOLD}{MAGENTA}
 SHUTDOWN_MSG = f"""
 {DIM}─────────────────────────────────────────────{RESET}
   {GREEN}screen-shame stopped.{RESET}
-  {DIM}Your eyes thank you.{RESET}
+  {DIM}Your eyes, spine, and loved ones thank you.{RESET}
 {DIM}─────────────────────────────────────────────{RESET}
 """
+
+# ── Slack Emoji per tier ────────────────────────────────
+TIER_EMOJI = {
+    2:  ":eyes:",
+    4:  ":sweat_smile:",
+    6:  ":grimacing:",
+    8:  ":skull:",
+    10: ":rotating_light:",
+    12: ":fire::skull::fire:",
+}
 
 
 def log(msg: str, color: str = DIM):
@@ -253,10 +273,12 @@ def run(webhook_url: str, dry_run: bool = False):
             if active_hours >= threshold and threshold not in state["fired_tiers"]:
                 msg = pick_message(threshold)
                 timestamp = datetime.now().strftime("%I:%M %p")
+                emoji = TIER_EMOJI.get(threshold, ":eyes:")
+                tagline = random.choice(SLACK_TAGLINES)
                 slack_msg = (
-                    f":eyes: *Screen Time Alert — {format_time(state['active_minutes'])}*\n\n"
+                    f"{emoji} *Screen Time Alert — {format_time(state['active_minutes'])}*\n\n"
                     f"{msg}\n\n"
-                    f"_sent at {timestamp} by screen-shame_"
+                    f"_{tagline} | {timestamp}_"
                 )
 
                 if dry_run:
@@ -308,7 +330,7 @@ examples:
         if not webhook_url:
             print(f"\n  {RED}Error: provide --webhook or set SCREEN_SHAME_WEBHOOK{RESET}\n", file=sys.stderr)
             sys.exit(1)
-        msg = ":wave: *screen-shame test* — If you're reading this, the roasting pipeline is operational."
+        msg = ":wave: *screen-shame test* — If you're reading this, the roasting pipeline is operational. Prepare to be judged."
         if send_slack_message(webhook_url, msg):
             print_test_success()
         else:
@@ -318,7 +340,7 @@ examples:
 
     if not webhook_url and not args.dry_run:
         print(f"\n  {RED}Error:{RESET} provide --webhook URL or set SCREEN_SHAME_WEBHOOK")
-        print(f"  {DIM}Or use --dry-run to test without Slack.{RESET}\n")
+        print(f"  {DIM}Or use --dry-run to judge yourself locally.{RESET}\n")
         sys.exit(1)
 
     try:
